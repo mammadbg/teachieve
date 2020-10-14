@@ -1,0 +1,79 @@
+.input-group-white {
+  padding: 31px 28px;
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $light-gray;
+  input {
+    width: calc(100% - 60px);
+    font-size: 20px;
+    border: none;
+  }
+  img {
+    height: 30px;
+  }
+}
+input {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background: #fff;
+  }
+}
+.input-group-gray-outlined {
+  padding: 15px 18px 16px 17px;
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $light-gray;
+  input {
+    width: calc(100% - 60px);
+    font-size: 14px;
+    border: none;
+    color: $text-gray;
+    background-color: #fff;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: #fff;
+      outline: none;
+    }
+    &::placeholder {
+      color: $text-gray;
+    }
+  }
+  img {
+    height: 24px;
+  }
+}
+.input-gray-outlined {
+  padding: 15px 18px 16px 17px;
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid $light-gray;
+  font-size: 14px;
+  @include decoration;
+  &::placeholder {
+    color: $text-gray;
+  }
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid $light-gray;
+  text-align: center;
+  &:focus,
+  &:active,
+  &:hover {
+    border: 1px solid $primary-blue;
+    outline: none;
+  }
+}

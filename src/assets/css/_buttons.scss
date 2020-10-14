@@ -1,0 +1,194 @@
+@mixin outlined-button($clr, $thickness, $fnt) {
+  border-radius: 10px;
+  border: $thickness solid $clr;
+  padding: 13px 75px 13px 26px;
+  font-size: $fnt;
+  outline: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+@mixin button-rounded {
+  border-radius: 100px;
+  width: 100%;
+}
+
+@mixin button-blue-bg {
+  background: $primary-blue;
+  color: #fff;
+  border: none;
+  &:focus,
+  &:active,
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.button {
+  &-blue {
+    color: $primary-blue;
+    border-color: $primary-blue;
+    background: #fff;
+    font-size: 12px;
+    padding: 15px 30px;
+  }
+  &-grey {
+    color: #000;
+    border-color: $light-gray;
+    background: #fff;
+    border-width: 1px;
+  }
+  &-grey-outlined-rounded {
+    color: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      margin-right: 12px;
+    }
+    @include outlined-button($light-gray, 1px, 12px);
+    @include button-rounded;
+  }
+  &-blue-outlined {
+    color: $primary-blue;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    @include outlined-button($light-gray, 1px, 12px);
+    margin: auto 0;
+    white-space: nowrap;
+    svg {
+      margin-left: 15px;
+    }
+    padding-right: 26px;
+    width: 100%;
+  }
+  &-grey-outlined-rounded {
+    color: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      margin-right: 12px;
+    }
+    @include outlined-button($light-gray, 1px, 12px);
+    @include button-rounded;
+  }
+  &-blue-bg-rounded {
+    padding: 16px;
+    font-size: 14px;
+    @include button-rounded;
+    @include button-blue-bg;
+  }
+  &-dark-blue {
+    color: #fff;
+    background-color: $dark-blue;
+    border: none;
+    border-radius: 10px;
+  }
+  &-blue-bg {
+    background: $primary-blue;
+    color: #fff;
+    &:focus,
+    &:active,
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      transform: scale(1.1);
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &-rounded {
+    border-radius: 100px;
+    border: none;
+    width: fit-content;
+  }
+  &-transparent {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  &-xl {
+    padding: 37px 90px;
+    font: 24px m-bold;
+  }
+  &-l {
+    padding: 29px 90px;
+    font: 28px m-regular;
+  }
+  &-l {
+    padding: 29px 90px;
+    font: 28px m-regular;
+  }
+}
+[class^="button"] {
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+}
+.outlined-button {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 21px 35px;
+  font: 24px m-bold;
+  outline: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.chip {
+  font: 16px m-medium;
+  color: $text-gray;
+  border: 1px solid $light-gray;
+  border-radius: 100px;
+  padding: 4px 23px 5px 30px;
+  margin: 0 5px;
+  position: relative;
+  // &::after{
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 15px;
+  //   content: 'as';
+  // }
+  &-blue {
+    background: $primary-blue;
+    color: #fff;
+    border: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .button-blue {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+  .button {
+    &-xl {
+      font-size: 16px;
+      padding: 10px 28px;
+    }
+  }
+}
+
+.right-arrow {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+.down-arrow {
+  svg {
+    transform: rotate(-90deg);
+  }
+  justify-content: center;
+}

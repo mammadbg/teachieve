@@ -1,0 +1,231 @@
+.login {
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  .logo-for-mobile {
+    display: none;
+  }
+  &__left {
+    width: 581px;
+    height: 100%;
+    border-radius: 0px 50px 50px 0px;
+    background: $primary-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 56px;
+    h1 {
+      margin-bottom: 26px;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: calc(100% - 581px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .login-page-image {
+      max-width: 100%;
+    }
+    &--bottom {
+      text-align: center;
+      img {
+        height: 29px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .login {
+    flex-direction: column-reverse;
+    &__left {
+      width: 100%;
+      height: 50%;
+      border-radius: 50px 50px 0 0;
+      align-items: center;
+      h1 {
+        margin-bottom: 0;
+      }
+      .input-group-white {
+        width: 50%;
+        margin-top: 20px;
+      }
+      button {
+        width: 50%;
+      }
+    }
+    &__right {
+      width: 100%;
+      height: 50%;
+      align-items: center;
+      .login-page-image {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login {
+    display: block;
+    .logo-for-mobile {
+      display: block;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+      }
+    }
+    &__left {
+      width: 100%;
+      height: calc(100% - 100px);
+      border-radius: 50px;
+      align-items: center;
+      h1 {
+        margin-bottom: 0;
+      }
+      .input-group-white {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px 20px;
+        input {
+          width: calc(100% - 50px);
+        }
+      }
+      button {
+        width: 100%;
+        font-size: 17px;
+        padding: 10px 20px;
+      }
+    }
+    &__right {
+      display: none;
+    }
+  }
+}
+.entry {
+  padding: 56px 33px 56px 36px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__logo {
+    text-align: center;
+    height: 68px;
+  }
+  &__body {
+    h2 {
+      width: 212px;
+      text-transform: capitalize;
+    }
+    h2,
+    a,
+    h6,
+    p {
+      margin-bottom: 26px;
+    }
+    &--description {
+      color: $text-gray;
+      font-size: 12px;
+    }
+    .button-blue {
+      width: 100%;
+      font-family: m-medium;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      width: calc(100% - (170px + 57px));
+    }
+    a {
+      width: 170px !important;
+      text-align: center;
+    }
+  }
+}
+// signin
+// ********************
+// ********************
+@media only screen and (max-width: 600px) {
+  .signin {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.signin {
+  background-repeat: no-repeat;
+  background-position: 100% 0px;
+  padding: 0 !important;
+  &__cover-image {
+    height: calc(100vh - 550px);
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      float: right;
+    }
+  }
+  &__description {
+    height: 117px;
+    padding: 0 44px;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 12px;
+      color: gray;
+      margin-top: 16px;
+    }
+  }
+  &__main {
+    text-align: center;
+    height: 433px;
+    padding: 0 55px;
+    .input-group-gray-outlined {
+      margin-top: 21px;
+    }
+    .button-blue-bg-rounded {
+      margin-top: 54px;
+    }
+    .button-transparent {
+      margin-top: 50px;
+    }
+  }
+  .pagination-dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $light-gray;
+      margin: 0 5px;
+    }
+  }
+}
+
+
+.back-button {
+  width: fit-content;
+  position: absolute;
+  top: 24px;
+  left: 20px;
+}
