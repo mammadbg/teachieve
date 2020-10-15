@@ -1535,7 +1535,7 @@ body {
 }
 
 .text-blue {
-  color: #149CFF;
+  color: #149CFF !important;
 }
 
 .input-group-white {
@@ -1658,7 +1658,7 @@ input:hover, input:focus, input:active {
 }
 
 .show {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .filtering-tags {
@@ -2488,5 +2488,66 @@ input:hover, input:focus, input:active {
 
 .new-project button svg {
   margin-right: 22px;
+}
+
+.main {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 71px 0;
+}
+
+.main__content {
+  position: relative;
+  height: calc(100vh - 144px);
+  z-index: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.main__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.main__footer .inner {
+  width: calc(100% / 3);
+  text-align: center;
+  position: relative;
+}
+
+.main__footer .new-project-button {
+  position: absolute;
+  top: -54px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #149cff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

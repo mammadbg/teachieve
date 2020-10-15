@@ -97,16 +97,16 @@
   h1 {
     margin-bottom: 21px;
   }
-  &__heading{
+  &__heading {
     display: flex;
     align-items: baseline;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding-bottom: 21px;
-    h1{
+    h1 {
       margin-bottom: 0;
       width: calc(100% - 111px);
     }
-    span{
+    span {
       font: 12px m-regular;
     }
   }
@@ -148,18 +148,18 @@
       margin-right: 22px;
     }
   }
-  .button-transparent{
+  .button-transparent {
     padding: 0;
     @include flex-center;
     width: 100%;
     font-size: 12px;
-    svg{
+    svg {
       transform: rotate(-90deg);
       width: 15px;
       margin-left: 15px;
     }
   }
-  .user-chip{
+  .user-chip {
     margin-bottom: 14px;
   }
 }
@@ -203,6 +203,51 @@
     padding: 13px 48px 12px 17px;
     svg {
       margin-right: 22px;
+    }
+  }
+}
+
+.main {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 71px 0;
+  &__content {
+    position: relative;
+    height: calc(100vh - 144px);
+    z-index: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  &__footer {
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    .inner {
+      width: calc(100% / 3);
+      text-align: center;
+      position: relative;
+    }
+    .new-project-button {
+      position: absolute;
+      top: -54px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #149cff;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

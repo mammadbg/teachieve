@@ -47,29 +47,6 @@
         </svg>
       </div>
       <div class="premium__content">
-        <div class="column">
-          <div class="premium-card">
-            <div class="premium-card__image">
-              <img src="../../assets/img/insomnia.png" alt="" />
-            </div>
-
-            <div class="premium-card__heading">
-              <router-link to="/#" class="heading-l text-blue"
-                >Innput stratup Lorem, ipsum dolor. sit asds
-                jkhaskdh</router-link
-              >
-              <p class="text-m"><span class="heading-l">124</span> baxış</p>
-            </div>
-            <p class="premium-card__description text-m">
-              we are startup company which need a lot of mobile Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Cupiditate eligendi
-              pariatur quas!
-            </p>
-            <div class="premium-card__footer">
-              <p class="heading-m">01-01-2021</p>
-            </div>
-          </div>
-        </div>
         <div class="column" v-for="(a, i) in 6" :key="i">
           <PremiumCard></PremiumCard>
         </div>

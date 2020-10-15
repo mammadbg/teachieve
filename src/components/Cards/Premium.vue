@@ -1,13 +1,11 @@
 <template>
-  <div class="premium-card">
+  <div class="premium-card" @click="gotoPreview()">
     <div class="premium-card__image">
       <img src="../../assets/img/Rectangle.png" alt="" />
     </div>
 
     <div class="premium-card__heading">
-      <router-link to="/#" class="heading-l text-blue"
-        >Innput stratup</router-link
-      >
+      <p class="heading-l text-blue">Innput stratup</p>
       <p class="text-m"><span class="heading-l">3331</span> baxış</p>
     </div>
     <p class="premium-card__description text-m">
@@ -20,7 +18,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    gotoPreview() {
+      this.$router.push("/project/1");
+    }
+  }
+};
 </script>
 
 <style></style>

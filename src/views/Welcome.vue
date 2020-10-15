@@ -2,6 +2,7 @@
   <div>
     <Navbar></Navbar>
     <main class="welcome">
+      <Sidebar></Sidebar>
       <div class="content">
         <h1 class="heading-xl">
           Proyektin üçün komanda yoldaşını saniyələr içində tap
@@ -20,10 +21,12 @@
 
 <script>
 import Navbar from "@/components/Navbars/Navbar.vue";
+import Sidebar from "@/components/Sidebar.vue";
 export default {
   name: "Welcome",
   components: {
-    Navbar
+    Navbar,
+    Sidebar
   }
 };
 </script>
@@ -41,6 +44,7 @@ export default {
   background-position-x: 100%;
   background-position-y: calc(100% - 114px);
   background-repeat: no-repeat;
+  padding-top: 71px;
   .content {
     width: 60%;
     display: flex;
@@ -60,7 +64,7 @@ export default {
   .welcome {
     background-position: 0% 100%;
     background-size: 400px;
-    height: calc(100vh - 71px);
+    height: 100vh;
     display: block;
     .content {
       padding: 25px;
