@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/" class="fyt-logo" :class="{ twelve: size == '12px' }"
+  <router-link to="/home" class="fyt-logo" :class="{ twelve: size == '12px' }"
     >Find<span>Your</span>teammates</router-link
   >
 </template>
@@ -17,7 +17,7 @@ export default {
 .fyt-logo {
   text-transform: uppercase;
   display: inline;
-  font: 24px m-bold;
+  font: 3vw m-bold;
   color: #149cff !important;
   span {
     color: #000 !important;
@@ -33,6 +33,11 @@ export default {
   font-size: 12px !important;
   span {
     font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .fyt-logo {
+    font-size: 2vw;
   }
 }
 </style>

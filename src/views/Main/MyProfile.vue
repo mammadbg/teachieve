@@ -1,6 +1,16 @@
 <template>
   <div class="profile">
     <div class="container">
+      <div class="profile__nav">
+        <button class="button-blue-outlined">
+          <span>Düzəliş et</span>
+          <img src="@/assets/icons/edit.svg" alt="" />
+        </button>
+        <button class="button-blue-outlined" @click="logOut()">
+          <span>Çıxış</span>
+          <img src="@/assets/icons/logout.svg" alt="" />
+        </button>
+      </div>
       <div class="profile__about">
         <h1 class="heading-xl">Profil haqqında</h1>
         <div class="profile__about--info">
@@ -24,6 +34,14 @@
           <li class="text-l">Android Jetpack library-si</li>
           <li class="text-l">REST API</li>
         </ul>
+        <router-link
+          to="/new-project"
+          class="button-blue-outlined"
+          id="addNewProjectButton"
+        >
+          Yeni layihə əlavə et
+          <img src="@/assets/icons/plus2.svg" alt="" />
+        </router-link>
       </div>
       <Tags></Tags>
       <div class="projects__content">
@@ -41,6 +59,12 @@ export default {
   components: {
     ProjectCard,
     Tags
+  },
+  methods: {
+    logOut() {
+      this.$router.push("/");
+      this.$store.state.loggedIn = false;
+    }
   }
 };
 </script>

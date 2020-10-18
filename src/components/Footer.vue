@@ -73,7 +73,7 @@
       </router-link>
     </div>
     <div class="inner">
-      <router-link to="/profile">
+      <router-link to="/myProfile">
         <svg
           width="30"
           height="30"
@@ -119,4 +119,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@media (min-width: 992px) {
+  .main__footer {
+    display: none !important;
+  }
+}
+</style>

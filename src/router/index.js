@@ -6,15 +6,16 @@ import Welcome from "../views/Welcome.vue";
 import Main from "../views/Main/Main.vue";
 import Home from "../views/Main/Home.vue";
 import Profile from "../views/Main/Profile.vue";
+import MyProfile from "../views/Main/MyProfile.vue";
 import Project from "../views/Main/Project.vue";
 import NewProject from "../views/Main/NewProject.vue";
 import About from "../views/Main/About.vue";
 import Sponsors from "../views/Main/Sponsors.vue";
 import Contact from "../views/Main/Contact.vue";
 // auth
-import Login from "../views/Login.vue";
+import Login from "../views/LoginTest.vue";
 import Signin from "../views/Auth/Signin.vue";
-import Entry from "../views/Auth/Entry.vue";
+import Entry from "../views/Auth/SigninOptions.vue";
 import Signup from "../views/Auth/Signup.vue";
 import Restore from "../views/Auth/RestorePassword.vue";
 import EnterEmail from "../views/Auth/EnterEmail.vue";
@@ -34,7 +35,7 @@ const routes = [
     component: Login
   },
   {
-    path: "/entry",
+    path: "/sign-in-options",
     name: "Entry",
     component: Entry
   },
@@ -81,9 +82,14 @@ const routes = [
         component: Home
       },
       {
-        path: "/profile",
+        path: "/profile/1",
         name: "Profile",
         component: Profile
+      },
+      {
+        path: "/myProfile",
+        name: "MyProfile",
+        component: MyProfile
       },
       {
         path: "/new-project",

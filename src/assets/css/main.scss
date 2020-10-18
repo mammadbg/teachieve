@@ -1,19 +1,26 @@
-@import "fonts";
-@import "bootstrap-grid";
-@import "reset";
+@import "base/bootstrap-grid";
+@import "base/reset";
+@import "base/fonts";
+@import "base/base";
+@import "base/variables";
 
-@import "base";
-@import "variables";
-@import "mixins";
-
-@import "colors";
-@import "buttons";
-@import "text";
-@import "inputs";
+@import "components/mixins";
+@import "components/colors";
+@import "components/buttons";
+@import "components/text";
+@import "components/inputs";
+@import "components/components";
 
 
-@import "classes";
-@import "components";
-@import "login";
-@import "cards";
-@import "pages";
+@import "layout";
+@import "components/cards";
+@import "pages/login";
+@import "pages/home";
+@import "pages/sidebar";
+@import "pages/profile";
+@import "pages/project";
+@import "pages/mainPage";
+
+
+
+@import "components/classes";

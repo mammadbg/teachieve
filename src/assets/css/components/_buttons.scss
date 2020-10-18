@@ -127,13 +127,31 @@
     padding: 29px 90px;
     font: 28px m-regular;
   }
+  &-scroll {
+    &--left {
+      left: 0px;
+      @include flex-center;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+    &--right {
+      right: 0px;
+    }
+  }
+}
+[class^="button-scroll"] {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid $light-gray;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include fit-contain;
 }
 [class^="button"] {
-  &:focus,
-  &:active,
-  &:hover {
-    outline: none;
-  }
+  @include decoration;
 }
 .outlined-button {
   border-radius: 10px;
@@ -142,10 +160,7 @@
   padding: 21px 35px;
   font: 24px m-bold;
   outline: none;
-  &:focus,
-  &:active {
-    outline: none;
-  }
+  @include decoration;
 }
 .chip {
   font: 16px m-medium;
@@ -155,20 +170,13 @@
   padding: 4px 23px 5px 30px;
   margin: 0 5px;
   position: relative;
-  // &::after{
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   left: 15px;
-  //   content: 'as';
-  // }
   &-blue {
     background: $primary-blue;
     color: #fff;
     border: none;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .button-blue {
     font-size: 10px;
     padding: 8px 12px;
@@ -182,7 +190,7 @@
 }
 
 .right-arrow {
-  svg {
+  img {
     transform: rotate(180deg);
   }
 }
@@ -191,4 +199,11 @@
     transform: rotate(-90deg);
   }
   justify-content: center;
+}
+
+.back-button {
+  width: fit-content;
+  position: absolute;
+  top: 24px;
+  left: 20px;
 }

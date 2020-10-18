@@ -1,0 +1,30 @@
+.sidebar {
+  width: 100%;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 71px;
+  margin-left: -100%;
+  z-index: 2;
+  background-image: linear-gradient(to right,$text-gray,$light-gray,rgba(#434343, .3));
+  padding: 23px;
+  transition: 0.3s ease-in-out;
+  &__section {
+    padding: 20px 0;
+    a {
+      color: #fff;
+      transition: 0.3s ease-in-out;
+      @include decoration;
+      &:hover{
+        color: $primary-blue;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar{
+    padding-left: 60px;
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,156 @@
+.home {
+}
+.premium {
+  &__head {
+    padding: 7px 23px;
+    display: flex;
+    align-items: center;
+    h1 {
+      display: inline !important;
+      margin-right: 6px;
+    }
+  }
+  &__content {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 18px 0 19px 11px;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+
+    .column {
+      padding: 0 12px;
+    }
+  }
+  [class^="button-scroll"] {
+    display: none;
+  }
+}
+.projects {
+  &__head {
+    padding: 7px 23px;
+  }
+  &__content {
+    width: 100%;
+    padding: 8px 23px;
+    scroll-behavior: smooth;
+  }
+}
+@media (min-width: 601px) {
+  .home {
+    padding: 76px 0;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .home {
+    .button-blue-outlined {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+  .premium {
+    position: relative;
+    &__head {
+      padding: 23px 0px 50px 0px;
+      display: flex;
+      align-items: center;
+      h1 {
+        display: inline !important;
+        margin-right: 6px;
+      }
+    }
+    &__content {
+      @include scroll-style;
+    }
+  }
+  .projects {
+    &__head {
+      padding: 50px 0px;
+    }
+    &__content {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .home {
+    .filtering-tags{
+      display: none;
+    }
+  }
+  .premium {
+    position: relative;
+    padding-top: 0;
+    &__head {
+      display: flex;
+      align-items: center;
+      h1 {
+        display: inline !important;
+        margin-right: 6px;
+      }
+    }
+    &__content {
+      display: -webkit-box;
+      padding-left: 0;
+      padding-right: 0;
+      scroll-behavior: smooth;
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      .column {
+        padding: 0 12px;
+        width: 940px;
+      }
+      .button-blue-outlined {
+        display: none;
+      }
+    }
+    [class^="button-scroll"] {
+      display: flex;
+    }
+    .button-scroll--left {
+      left: -31px;
+    }
+    .button-scroll--right {
+      right: -31px;
+    }
+  }
+  .projects {
+    &__content {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .premium {
+    position: relative;
+    &__head {
+      display: flex;
+      align-items: center;
+      h1 {
+        display: inline !important;
+        margin-right: 6px;
+      }
+    }
+    &__content {
+      // display: block;
+      .column {
+        padding: 0 12px;
+        width: 1260px;
+      }
+    }
+  }
+  .projects {
+    &__content {
+      width: 100%;
+    }
+  }
+}

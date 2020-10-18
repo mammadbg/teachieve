@@ -8,13 +8,13 @@
           id="registrationPassword"
         />
         <img
-          src="../../assets/img/eye.png"
+          src="@/assets/img/eye.png"
           v-if="passwordIsVisible"
           alt=""
           @click="changePasswordVisibility()"
         />
         <img
-          src="../../assets/img/eye-off.png"
+          src="@/assets/img/eye-off.png"
           v-if="!passwordIsVisible"
           alt=""
           @click="changePasswordVisibility()"
@@ -27,13 +27,13 @@
           id="registrationPasswordRepeat"
         />
         <img
-          src="../../assets/img/eye.png"
+          src="@/assets/img/eye.png"
           v-if="passwordRepeatIsVisible"
           alt=""
           @click="changePasswordRepeatVisibility()"
         />
         <img
-          src="../../assets/img/eye-off.png"
+          src="@/assets/img/eye-off.png"
           v-if="!passwordRepeatIsVisible"
           alt=""
           @click="changePasswordRepeatVisibility()"
@@ -84,5 +84,3 @@ export default {
   }
 };
 </script>
-
-<style></style>

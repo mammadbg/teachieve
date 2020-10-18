@@ -73,9 +73,28 @@
           </mask>
         </svg>
       </button>
-      <router-link to="/entry" class="outlined-button button-blue"
+      <router-link
+        to="/sign-in-options"
+        class="outlined-button button-blue"
+        v-if="!$store.state.loggedIn"
         >Daxil ol</router-link
       >
+
+      <router-link
+        class="outlined-button button-blue"
+        v-if="$store.state.loggedIn"
+        to="/myProfile"
+        id="navbarUser"
+      >
+        <span class="navbar-username">
+          {{ $store.state.userName }}
+        </span>
+        <img src="@/assets/icons/person.svg" alt="" />
+      </router-link>
+
+      <button id="loginTest" @click="changeLoginState()">
+        Login/logout test
+      </button>
     </div>
   </nav>
 </template>
@@ -83,79 +102,30 @@
 <script>
 import Logo from "./Logo";
 export default {
+  data() {
+    return {
+      loggedIn: true
+    };
+  },
   components: {
     Logo
   },
   methods: {
     toggleSideBar() {
       this.$root.$emit("toggleSideBar");
+    },
+    checkUserLogin() {
+      console.log(this.$store.state.loggedIn);
+    },
+    changeLoginState() {
+      this.$store.state.loggedIn = !this.$store.state.loggedIn;
+      console.log("asdasdasd", this.$store.state.loggedIn);
     }
+  },
+  created() {
+    this.checkUserLogin();
   }
 };
 </script>
 
-<style lang="scss" scoped>
-.navbar {
-  padding: 50px 54px 50px 50px;
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  background: #fff;
-  &__left {
-    display: flex;
-    align-items: center;
-    button {
-      margin-right: 56px;
-    }
-  }
-  &__right {
-    display: flex;
-    align-items: center;
-    &--search {
-      margin-right: 55px;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 19px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    .fyt-logo {
-      font-size: 3vw;
-      margin-bottom: 6px;
-    }
-
-    &__left {
-      .button-transparent {
-        margin-right: 0;
-        margin-top: 5px;
-        svg {
-          width: 18px;
-          height: 18px;
-        }
-      }
-    }
-    &__right {
-      &--search {
-        margin-right: 0;
-        svg {
-          width: 18px;
-          height: 18px;
-        }
-      }
-    }
-  }
-}
-</style>
+<style lang="scss"></style>

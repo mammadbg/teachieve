@@ -20,6 +20,11 @@ export default {
         { name: "iş", value: 3, selected: false },
         { name: "yeni", value: 4, selected: false },
         { name: "müəllim", value: 5, selected: false },
+        { name: "direktor", value: 6, selected: false },
+        { name: "şagird", value: 2, selected: false },
+        { name: "iş", value: 3, selected: false },
+        { name: "yeni", value: 4, selected: false },
+        { name: "müəllim", value: 5, selected: false },
         { name: "direktor", value: 6, selected: false }
       ]
     };

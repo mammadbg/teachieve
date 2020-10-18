@@ -42,9 +42,10 @@ export default {
   background-image: url("../assets/img/Group.png");
   background-size: 50%;
   background-position-x: 100%;
-  background-position-y: calc(100% - 114px);
+  background-position-y: 100%;
   background-repeat: no-repeat;
   padding-top: 71px;
+  min-height: 100vh;
   .content {
     width: 60%;
     display: flex;

@@ -1,0 +1,161 @@
+.project {
+  padding: 33px 29px 50px 29px;
+  h1 {
+    margin-bottom: 21px;
+  }
+  &__heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 21px;
+    h1 {
+      margin-bottom: 0;
+      width: calc(100% - 111px);
+    }
+    span {
+      font: 12px m-regular;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 181px;
+    background: $bg-gray;
+    border-radius: 10px;
+    margin: 32px 0;
+    @include fit-cover;
+  }
+  &__about {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-bottom: 32px;
+  }
+  &__contact {
+    &--item {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin-bottom: 14px;
+      img {
+        width: 24px;
+        margin-right: 16px;
+      }
+    }
+  }
+  .button-blue-bg-rounded {
+    margin: 50px 0 14px 0;
+    width: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 48px 12px 17px;
+    img {
+      margin-right: 22px;
+    }
+  }
+  .button-transparent {
+    padding: 0;
+    @include flex-center;
+    width: 100%;
+    font-size: 12px;
+    svg {
+      transform: rotate(-90deg);
+      width: 15px;
+      margin-left: 15px;
+    }
+  }
+  .user-chip {
+    margin-bottom: 14px;
+  }
+}
+
+.new-project {
+  padding: 33px 29px 50px 29px;
+  h1 {
+    margin-bottom: 21px;
+  }
+  &__image {
+    width: 100%;
+    height: 181px;
+    background: $bg-gray;
+    @include flex-center;
+    border-radius: 10px;
+    margin: 32px 0;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .input-gray-outlined {
+    margin-bottom: 17px;
+  }
+  textarea {
+    height: fit-content;
+    min-height: 150px;
+    max-height: 250px;
+  }
+  .filtering-tags {
+    width: calc(100% + 29px);
+    margin-right: -29px;
+    padding-left: 0;
+  }
+  button {
+    margin: 50px 0;
+    width: fit-content;
+    float: right;
+    display: flex;
+    align-items: center;
+    padding: 13px 48px 12px 17px;
+    svg {
+      margin-right: 22px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .project {
+    &__heading {
+      &--view-count {
+        color: $text-gray;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__image {
+      height: 365px;
+    }
+    &__about {
+      font-size: 22px;
+      line-height: 27px;
+      text-align: justify;
+      color: $dark-gray;
+    }
+    .button-blue-bg-rounded {
+      width: 300px;
+      float: none;
+    }
+    .user-chip {
+      .heading-l {
+        font-size: 16px;
+      }
+      .text-l {
+        font-size: 13px;
+      }
+    }
+  }
+  .new-project {
+    h1 {
+      margin: 21px 0;
+    }
+    &__image {
+      height: 365px;
+    }
+    .input-gray-outlined {
+      margin-bottom: 17px;
+    }
+    .filtering-tags{
+      display: flex;
+    }
+  }
+}

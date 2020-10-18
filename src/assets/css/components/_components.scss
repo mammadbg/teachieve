@@ -1,0 +1,167 @@
+.filtering-tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 29px 0 29px 23px;
+}
+@media (min-width: 769px) {
+  .filtering-tags {
+    @include scroll-style;
+  }
+}
+@media (min-width: 992px) {
+  .filtering-tags {
+    display: none;
+  }
+}
+
+.user-chip {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 18px 23px 19px 17px;
+  cursor: pointer;
+  .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include fit-cover;
+    margin-right: 17px;
+  }
+  .content {
+    width: calc(100% - 58px);
+    h6 {
+      margin-bottom: 2px;
+      width: 100%;
+      height: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      width: 100%;
+      height: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+
+.navbar {
+  padding: 16px 54px 16px 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  &__left {
+    display: flex;
+    align-items: center;
+    button {
+      margin-right: 56px;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    &--search {
+      margin-right: 55px;
+    }
+    #navbarUser {
+      span{
+        font-size: 2vw;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  #loginTest {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    color: red;
+    background: #fff;
+  }
+}
+
+@media (max-width:991px){
+  .navbar {
+    padding: 19px;
+    &__left {
+      .button-transparent {
+        margin-right: 0;
+        margin-top: 5px;
+      }
+    }
+    &__right {
+      &--search {
+        margin-right: 0;
+        svg {
+          width: 23px;
+          height: 23px;
+          margin-right: 20px;
+        }
+      }
+      #navbarUser {
+        span{
+          display: none;
+        }
+        img {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px;
+    &__left {
+      .button-transparent {
+        margin-right: 0;
+        margin-top: 5px;
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    &__right {
+      &--search {
+        margin-right: 0;
+        svg {
+          width: 23px;
+          height: 23px;
+          margin-right: 20px;
+        }
+      }
+      #navbarUser {
+        span{
+          display: none;
+        }
+        img {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
