@@ -1,4 +1,4 @@
-# teammate
+# teachieve
 
 ## Project setup
 ```
